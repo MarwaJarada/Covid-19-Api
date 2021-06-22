@@ -12,6 +12,12 @@ DATA_REQUEST_EDIT="covidRequestedit"
 app = Flask(__name__)
 api=Api(app)
 
+
+@app.route("/")
+def index():
+    return "Welcome"
+
+
 #Firestore DB Initialization
 cred = credentials.Certificate('key.json')
 default_app = initialize_app(cred)
@@ -95,10 +101,7 @@ def edit(email,password,new_name,new_email,new_password):
         return {"status":"Invalid email"}
 
 
-@app.route("/")
-def index():
-    return "Welcome"
-
-
 if __name__=="__main__":
     app.run(debug=True)
+
+
