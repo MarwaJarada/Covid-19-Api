@@ -1,4 +1,8 @@
+import codecs
 import re
+import webbrowser
+
+import os
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
 from firebase_admin import credentials, firestore, initialize_app
@@ -17,7 +21,7 @@ api=Api(app)
 def index():
     return "Welcome"
 
-
+webbrowser.open('file://' + os.path.realpath("sample.html"))
 #Firestore DB Initialization
 cred = credentials.Certificate('key.json')
 default_app = initialize_app(cred)
