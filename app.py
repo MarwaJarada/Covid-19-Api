@@ -95,6 +95,9 @@ def edit(email,password,new_name,new_email,new_password):
         return {"status":"Invalid email"}
 
 
+@app.route("/")
+def index():
+    return "Welcome"
 
 
 if __name__=="__main__":
