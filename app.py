@@ -5,7 +5,7 @@
 # import os
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
-from firebase_admin import credentials, firestore, initialize_app
+#from firebase_admin import credentials, firestore, initialize_app
 #
 #regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 # DATA_REQUEST_REGISTER="covidRequestregister"
