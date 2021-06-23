@@ -104,8 +104,3 @@ def edit(email,password,new_name,new_email,new_password):
     else:
         return {"status":"Invalid email"}
 
-
-if __name__=="__main__":
-    app.run(debug=True)
-
-
