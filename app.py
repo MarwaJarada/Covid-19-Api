@@ -1,25 +1,25 @@
-import codecs
-import re
-import webbrowser
-
-import os
-from flask import Flask, request, jsonify
-from flask_restful import Api, Resource
-from firebase_admin import credentials, firestore, initialize_app
-
-regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
-DATA_REQUEST_REGISTER="covidRequestregister"
-DATA_REQUEST_LOGIN="covidRequestlogin"
-DATA_REQUEST_EDIT="covidRequestedit"
-
-#Flask App Initialization
-app = Flask(__name__)
-api=Api(app)
-
-
-@app.route("/")
-def index():
-    return "Welcome"
+# import codecs
+# import re
+# import webbrowser
+#
+# import os
+# from flask import Flask, request, jsonify
+# from flask_restful import Api, Resource
+# from firebase_admin import credentials, firestore, initialize_app
+#
+# regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+# DATA_REQUEST_REGISTER="covidRequestregister"
+# DATA_REQUEST_LOGIN="covidRequestlogin"
+# DATA_REQUEST_EDIT="covidRequestedit"
+#
+# #Flask App Initialization
+# app = Flask(__name__)
+# api=Api(app)
+#
+#
+# @app.route("/")
+# def index():
+#     return "Welcome"
 
 # webbrowser.open('file://' + os.path.realpath("sample.html"))
 # #Firestore DB Initialization
@@ -110,11 +110,11 @@ def index():
 #
 #
 
-#
-# from flask import Flask
-#
-# app = Flask(__name__)
-#
-# @app.route("/")
-# def index():
-#     return "Hello this is the new version!"
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Hello this is the new version!"
