@@ -33,7 +33,6 @@ db = firestore.client()
 # question is the targeted Collection
 todo_ref = db.collection('User')
 
-#main
 #Data coming from Application post request
 class registerAPI(Resource):
     def post(self):
@@ -111,9 +110,6 @@ def edit(email,password,new_name,new_email,new_password):
 
 if __name__=="__main__":
     app.run(debug=True)
-
-
-
 
 
 app = Flask(__name__)
